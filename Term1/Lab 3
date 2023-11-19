@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+    double x, y;
+    double a = 12.5, b = 1.3;
+    printf ("Введіть x");
+    scanf ("%lf", &x);
+
+    double k = pow(a-b,2);
+    double s = pow(a-b, 3);
+    double ax = a+x;
+    double bx = b+x;
+    double f1 = ((-1)/k)*((1/ax)+(1/(1+x)))+(2/s)*log(ax/bx);
+    printf ("f1: %lf \n", f1 );
+
+    printf ("Введіть y");
+    scanf ("%lf", &y);
+
+    double q = (2*a);
+    double by = b*y;
+    double co = cos(by);
+    double si = pow(sin(by),2);
+    double tg = tan(by/2);
+
+    double f2 = ((-1)/q)*((co/si)-log(tg));
+    printf("f2: %lf", f2);
+
+
+return 0;
+}
